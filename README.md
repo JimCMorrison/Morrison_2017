@@ -1,24 +1,6 @@
-# README
+# Jim Morrison 2017 Portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my 2017 Personal Portfolio displaying my personal career
+accomplishments, side projects, and current articles I've written. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This Portfolio app was built on Ruby On Rails and is a ongoing project.  
