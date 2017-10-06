@@ -14,6 +14,12 @@
         <li><%= link_to "Work", 'work' %></li>
         <li><%= link_to "About", 'about' %></li>
       </ul>
+      <% if user_signed_in? %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to('Logout', destroy_user_session_path, method: :delete)%></li>
+        </ul>
+      <% end %>
     </div>
   </div>
+
 </nav>
