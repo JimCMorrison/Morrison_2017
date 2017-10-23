@@ -22,14 +22,27 @@
 	overflow: hidden;
 }
 
-#contact {
-	background-image: asset-url("phone-with-desk.jpg");
+//about page styling
+#about-wrapper {
+	background-color: white;
+	//background-color: #c8c9ca;
+
+}
+#aboutJumbo {
+	background: asset-url("me.jpg");
 	position: relative;
-	background-position: 50% 50%;
+	background-position: 100% 12%;
 	background-size: cover;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	font-weight: 100;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+}
+
+#about-container {
+	font-size: 18px;
 }
 
 #social-box {
