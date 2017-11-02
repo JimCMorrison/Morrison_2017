@@ -35,8 +35,15 @@ gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 
-#Devise for Authentication
+# Devise for Authentication
 gem 'devise'
+
+# For Blog & Comment use
+gem 'ckeditor'
+gem 'paperclip'
+
+# Local Time for easy breakdown of time and date
+gem 'local_time'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -47,6 +54,7 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'pry'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end

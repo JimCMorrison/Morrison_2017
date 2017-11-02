@@ -1,0 +1,60 @@
+<% if current_user.try(:admin?) %>
+  <%= form_for @post, url: posts_path, html: { multipart: true } do |f| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="post-wrapper">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="field">
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="field">
+            <%= f.label :url %>
+            <%= f.text_field :url %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="field">
+            <%= f.label :content %>
+            <%= f.cktext_area :content %>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="field">
+            <%= f.label :title_image %>
+            <%= f.file_field :title_image, as: :file %>
+          </div>
+        <div class="col-md-3">
+          <div class="field">
+            <%= f.label :post_date %>
+            <%= f.date_select :post_date %>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <%= link_to 'Back', posts_path, class: "btn btn-default" %>
+        <%= f.submit 'Create Post', class: "btn btn-success" %>
+      </div>
+    </div>
+  <% end %>
+
+<% else %>
+  <h3>Page unavailable</h3>
+<% end %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="post-wrapper">
+  <h1 id="post-title">Posts</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Url</th>
+        <th>Post Date</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.title %></td>
+          <td><%= post.content %></td>
+          <td><%= post.url %></td>
+          <td><%= local_date(post.post_date) %></td>
+          <td><%= link_to 'Show', post, class: "btn btn-primary" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<% if current_user.try(:admin?) %>
+  <%= link_to 'New Post', new_post_path, class: "btn btn-success" %>
+<% end %>

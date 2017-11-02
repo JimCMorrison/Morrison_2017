@@ -1,0 +1,43 @@
+<div id="blog-wrapper">
+
+  <div id="blog-jumbo" class="jumbotron">
+    <h1 id="blog-title">  Articles, Videos, and Tutorials  </h1>
+  </div>
+
+  <div id="recent-title" class="row">
+    <div class="col-md-12">
+      <h1> Recent Additions </h1>
+    </div>
+  </div>
+
+  <div id="latest-content" class="row">
+      <% if @recent_posts.present? %>
+        <% @recent_posts.reverse_each do |recent_post| %>
+          <div class="col-sm-3">
+            <a href="<%= recent_post.url %>">
+              <div class="thumbnail">
+                <%= image_tag recent_post.title_image %>
+                <div class="caption">
+                  <h3>
+                    <a href="<%= recent_post.url %>">
+                      <%= recent_post.title %>
+                    </a>
+                  </h3>
+                  <p>
+                    <%= recent_post.content.html_safe %>
+                  </p>
+                  <p>
+                    <%= local_date(recent_post.post_date) %>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        <% end %>
+      <% else %>
+        <h1> No Recent Posts </h1>
+      <% end %>
+    </div>
+  </div>
+
+</div>
