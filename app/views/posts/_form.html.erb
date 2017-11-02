@@ -1,4 +1,4 @@
-<%= form_for(post) do |f| %>
+<%= form_for @post, url: posts_path, html: { multipart: true } do |f| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -27,11 +27,18 @@
     </div>
 
     <div class="row">
-      <div class=".col-md-8">
+      <div class="col-md-8">
         <div class="field">
           <%= f.label :content %>
           <%= f.cktext_area :content %>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="field">
+          <%= f.label :title_image %>
+          <%= f.file_field :title_image, as: :file %>
+        </div>
+      </div>
       </div>
     </div>
 
