@@ -42,6 +42,9 @@ gem 'devise'
 gem 'ckeditor'
 gem 'paperclip'
 
+# Local Time for easy breakdown of time and date
+gem 'local_time'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

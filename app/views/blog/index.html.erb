@@ -12,7 +12,7 @@
 
   <div id="latest-content" class="row">
       <% if @recent_posts.present? %>
-        <% @recent_posts.each do |recent_post| %>
+        <% @recent_posts.reverse_each do |recent_post| %>
           <div class="col-sm-3">
             <a href="<%= recent_post.url %>">
               <div class="thumbnail">
@@ -25,6 +25,9 @@
                   </h3>
                   <p>
                     <%= recent_post.content.html_safe %>
+                  </p>
+                  <p>
+                    <%= local_date(recent_post.post_date) %>
                   </p>
                 </div>
               </div>

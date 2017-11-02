@@ -28,16 +28,21 @@
       </div>
 
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
           <div class="field">
             <%= f.label :content %>
             <%= f.cktext_area :content %>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="field">
             <%= f.label :title_image %>
             <%= f.file_field :title_image, as: :file %>
+          </div>
+        <div class="col-md-3">
+          <div class="field">
+            <%= f.label :post_date %>
+            <%= f.date_select :post_date %>
           </div>
         </div>
         </div>

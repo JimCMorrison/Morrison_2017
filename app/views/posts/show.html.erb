@@ -1,16 +1,22 @@
 <p id="notice"><%= notice %></p>
 <div class="post-wrapper">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
       <p>
         <strong>Title:</strong>
         <%= @post.title %>
       </p>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <p>
         <strong>Url:</strong>
         <%= @post.url %>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <p>
+        <strong>Date Published:</strong>
+        <%= local_date(@post.post_date) %>
       </p>
     </div>
   </div>

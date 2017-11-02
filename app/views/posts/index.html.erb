@@ -9,6 +9,7 @@
         <th>Title</th>
         <th>Content</th>
         <th>Url</th>
+        <th>Post Date</th>
         <th></th>
       </tr>
     </thead>
@@ -19,6 +20,7 @@
           <td><%= post.title %></td>
           <td><%= post.content %></td>
           <td><%= post.url %></td>
+          <td><%= local_date(post.post_date) %></td>
           <td><%= link_to 'Show', post, class: "btn btn-primary" %></td>
         </tr>
       <% end %>
