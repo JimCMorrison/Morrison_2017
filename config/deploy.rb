@@ -8,7 +8,7 @@ set :repo_url, "https://github.com/JimCMorrison/Morrison_2017"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/var/www/Morrison_2017"
+set :deploy_to, "/home/deploy/Morrison_2017"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -26,6 +26,7 @@ append :linked_files, "config/database.yml", "config/secrets.yml"
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
 
+after 'deploy:publishing', 'deploy:restart'
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
