@@ -82,7 +82,7 @@ Rails.application.configure do
   end
 
   #Paperclip Image Location
-  Paperclip.options[:command_path] = "/usr/bin/"
+  Paperclip.options[:command_path] = "/home/deploy/Morrison_2017/shared/public/uploads/"
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
