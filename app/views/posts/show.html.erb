@@ -28,7 +28,7 @@
       </p>
     </div>
     <div class="col-md-4">
-      <%= image_tag @post.title_image %>
+      <%= image_tag @post.title_image.url(:medium) %>
     </div>
   </div>
   <% if current_user.try(:admin?) %>
