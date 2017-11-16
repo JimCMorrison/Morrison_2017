@@ -40,4 +40,40 @@
     </div>
   </div>
 
+  <div id="all-posts-title" class="row">
+    <div class="col-md-12">
+      <a data-toggle="collapse" data-parent="#accordion" href="#all-posts-show" aria-expanded="false" aria-controls="collapseOne"><p>ALL POSTS</p></a>
+    </div>
+  </div>
+  <div id="all-posts-show" class="panel-collapse collapse" role="tabpanel">
+    <div id="all-post-content" class="row">
+        <% if @all_posts.present? %>
+          <% @all_posts.reverse_each do |all_post| %>
+            <div class="col-sm-3">
+              <a href="<%= all_post.url %>">
+                <div class="thumbnail">
+                  <%= image_tag all_post.title_image %>
+                  <div class="caption">
+                    <h3>
+                      <a href="<%= all_post.url %>">
+                        <%= all_post.title %>
+                      </a>
+                    </h3>
+                    <p>
+                      <%= all_post.content.html_safe %>
+                    </p>
+                    <p>
+                      <%= local_date(all_post.post_date) %>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          <% end %>
+        <% else %>
+          <h1> No Recent Posts </h1>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
