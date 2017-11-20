@@ -56,6 +56,9 @@ gem 'capistrano-rails', '~> 1.2'
 gem 'capistrano-passenger', '~> 0.2.0'
 gem 'capistrano-rvm'
 
+#Stop those silly bots
+gem "recaptcha", require: "recaptcha/rails"
+
 group :development, :test do
   gem 'pry'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

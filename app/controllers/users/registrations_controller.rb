@@ -1,7 +1,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
    before_action :configure_sign_up_params, only: [:create]
    before_action :configure_account_update_params, only: [:update]
-
+   prepend_before_action :check_captcha, only: [:create, :sign_up]
   # GET /resource/sign_up
   # def new
   #   super
@@ -9,6 +9,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   # def create
+  #   @user = User.new(params[:user].permit(:name))
+  #   if verify_recaptcha(model: @user) && @user.save
+  #     redirect_to @user
+  #   else
+  #     render 'new'
+  #   end
   #   super
   # end
 
@@ -57,4 +63,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  private
+    def check_captcha
+      unless verify_recaptcha
+        self.resource = resource_class.new sign_up_params
+        resource.validate # Look for any other validation errors besides Recaptcha
+        respond_with_navigational(resource) { render :new }
+      end
+    end
+
 end
