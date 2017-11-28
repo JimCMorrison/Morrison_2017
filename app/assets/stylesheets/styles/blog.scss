@@ -1,3 +1,7 @@
+#blog-wrapper {
+	background-color: #3b3c3d;
+}
+
 #blog-jumbo {
 	background: asset-url("JS_presentation.jpg");
 	position: relative;
@@ -22,6 +26,10 @@
   text-shadow: 2px 2px 2px black;
   text-align: center;
   padding: .4em;
+}
+
+.all-posts {
+	background-color: #3b3c3d;
 }
 
 #all-posts-title {
