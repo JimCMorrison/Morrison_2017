@@ -3,68 +3,59 @@
     <div class="col-md-12">
       <div id="intro" class="standard-title">
         <div class="container">
-          <h1 id="introTitle" class="standard-title"><u>JIM MORRISON</u></h1>
-          <h2 id="introTitle" class="standard-title">WEB DEVELOPER. WRITER.</h2>
+          <h1 id="landing-jumbo-name"class="standard-title">JIM MORRISON</h1>
+          <h2 class="standard-title">WEB DEVELOPER. WRITER.</h2>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section>
-  <div id="doing" class="standard-text">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 id="doingTitle" class="standard-title"><u>What I Am Currently Doing</u></h1>
-      <div class="row center">
-        <div class="col-md-4">
-          <h2><u>Work</u></h2>
-          <%= image_tag("kern_county_sc-150x150.png", class: "proj-shot") %>
-          <h3>Superior Court Of California</h3>
-          <h4>Programmer/Systems Analyst</h4>
-          <h5>January 2016 - Present</h5>
-          <a class="btn btn-primary" role="button" data-toggle="collapse" data-parent="#accordion" href="#careerThree" aria-expanded="false" aria-controls="collapseOne">Details</a>
-          <div id="careerThree" class="panel-collapse collapse" role="tabpanel">
-            <p><i>Ruby on Rails, BootStrap, PostgreSQL, Microsoft SQL, Sidekiq, XCode, BitBucket, JIRA</i></p>
-            <p>As a Programmer/System Analyst at the Superior Court of California, County of Kern I actively work in a two man development team programming, designing, deploying public and internal web applications.</p>
-            <br>
-            <p>My responsibilities include but are not limited to:</p>
-            <ul>
-              <li>Developing, designing, and deploying public facing government website and internal web applications. These applications are Ruby on Rails based with using PostgreSQL for the Databases.</li>
-              <li>Handing feature and bug fixes requests originating from JIRA for a variety of web applications.</li>
-              <li>Writing complex SQL statements for custom Enterprise Customer Reports.</li>
-              <li>Creation of development documentation for Superior Court of California, County of Kern for Internal and Partner use.</li>
-              <li>One of two developers involved in crafting 2017 award winning Top 10 Court Technology Solutions Court Website from National Association for Court Management.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h2 class="standard-title"><u>Side Project</u></h2>
 
-          <h3>Udemy ES6 Course</h3>
-          <i>In Development</i>
-        </div>
-        <div class="col-md-4">
-          <h2 class="standard-title"><u>Latest Content Created</u></h2>
-          <div id="recent-post-landing">
-            <% if @recent_post.present? %>
-              <%= image_tag @recent_post.title_image, class: "img_preview" %>
-              <h3>
-                <a href="<%= @recent_post.url %>">
-                  <%= @recent_post.title %>
-                </a>
-              </h3>
-              <p>
-                <%= @recent_post.content.html_safe %>
-              </p>
-              <p>
-                <%= local_date(@recent_post.post_date) %>
-              </p>
-            <% else %>
-              <h1> No Recent Posts </h1>
-            <% end %>
-          </div>
-        </div>
+
+<section class="container center">
+  <div class="row doing">
+    <div class="col-lg-6">
+      <h2 class="standard-title landing-sub-title"><b>Latest Content Created</b></h2>
+      <div id="recent-post-landing" class="standard-text work">
+        <% if @recent_post.present? %>
+          <%= image_tag @recent_post.title_image, class: "img_preview" %>
+          <h3>
+            <a href="<%= @recent_post.url %>">
+              <%= @recent_post.title %>
+            </a>
+          </h3>
+          <p>
+            <%= @recent_post.content.html_safe %>
+          </p>
+          <p>
+            <%= local_date(@recent_post.post_date) %>
+          </p>
+        <% else %>
+          <h1> No Recent Posts </h1>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-lg-6 standard-text">
+      <h2 class="standard-title landing-sub-title"><b>Work</b></h2>
+      <%= image_tag("kern_county_sc-150x150.png", class: "proj-shot") %>
+      <h3>Superior Court Of California</h3>
+      <h4>Programmer/Systems Analyst</h4>
+      <h5>January 2016 - Present</h5>
+      <a class="btn btn-primary" role="button" data-toggle="collapse" data-parent="#accordion" href="#careerThree" aria-expanded="false" aria-controls="collapseOne">Details</a>
+      <div id="careerThree" class="panel-collapse collapse" role="tabpanel">
+        <p><i>Ruby on Rails, BootStrap, PostgreSQL, Microsoft SQL, Sidekiq, XCode, BitBucket, JIRA</i></p>
+        <p>As a Programmer/System Analyst at the Superior Court of California, County of Kern I actively work in a two man development team programming, designing, deploying public and internal web applications.</p>
+        <br>
+        <p>My responsibilities include but are not limited to:</p>
+        <ul>
+          <li>Developing, designing, and deploying public facing government website and internal web applications. These applications are Ruby on Rails based with using PostgreSQL for the Databases.</li>
+          <li>Handing feature and bug fixes requests originating from JIRA for a variety of web applications.</li>
+          <li>Writing complex SQL statements for custom Enterprise Customer Reports.</li>
+          <li>Creation of development documentation for Superior Court of California, County of Kern for Internal and Partner use.</li>
+          <li>One of two developers involved in crafting 2017 award winning Top 10 Court Technology Solutions Court Website from National Association for Court Management.</li>
+        </ul>
       </div>
     </div>
   </div>

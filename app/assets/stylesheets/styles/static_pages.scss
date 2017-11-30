@@ -8,10 +8,10 @@
 	overflow: hidden;
 	}
 
-#doing {
-  background-color: #00000F;
-	padding-bottom: 2em;
+#landing-jumbo-name {
+	font-size: 52px;
 }
+
 #about {
 	background-color: #3b3c3d;
 	position: relative;
@@ -24,10 +24,9 @@
 
 //about page styling
 #about-wrapper {
-	background-color: white;
-	//background-color: #c8c9ca;
-
+	background-color: #3b3c3d;
 }
+
 #aboutJumbo {
 	background: asset-url("me.jpg");
 	position: relative;
@@ -43,12 +42,24 @@
 
 #about-container {
 	font-size: 18px;
+	color: white;
 }
 
-
+#recent-post-landing a:link, #recent-post-landing a:visited, #about-container a:link, #about-container a:visited {
+	color: white;
+}
 
 #contact_src {
 	line-height: 3;
+}
+
+.doing {
+  background-color: #3b3c3d;
+	padding-bottom: 2em;
+}
+
+.landing-sub-title{
+	font-size: 32px;	
 }
 
 .portfolio-box {
