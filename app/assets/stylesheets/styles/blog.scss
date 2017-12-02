@@ -1,3 +1,7 @@
+#blog-wrapper {
+	background-color: #3b3c3d;
+}
+
 #blog-jumbo {
 	background: asset-url("JS_presentation.jpg");
 	position: relative;
@@ -9,8 +13,6 @@
 	font-weight: 100;
 	color: white;
 	text-shadow: 2px 2px 2px black;
-  padding: 70px 0 70px 0;
-  letter-spacing: .4 em;
 }
 
 #blog-container {
@@ -24,6 +26,10 @@
   padding: .4em;
 }
 
+.all-posts {
+	background-color: #3b3c3d;
+}
+
 #all-posts-title {
   color: white;
   text-shadow: 2px 2px 2px black;
@@ -33,4 +39,8 @@
 
 #all-posts-title a:link, #all-posts-title a:visited {
 	color: white;
+}
+
+#latest-content, #all-posts-show {
+	padding: 2em;
 }

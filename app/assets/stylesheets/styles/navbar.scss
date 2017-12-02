@@ -1,4 +1,29 @@
+#contact_src {
+	color: white;
+}
+
 .navbar {
 	border-radius: 0px;
 	margin-bottom: 0px;
+}
+
+.navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav > li > a{
+	color: white;
+}
+
+#nav-left-linkage ul li{
+	font-size: 16px;
+	color: white;
+}
+
+.nav-text-color {
+	color: white;
+}
+
+.navbar-inverse .navbar-brand a:hover,.navbar-inverse .navbar-nav > li > a:hover{
+	color: #FFD700;
+}
+
+#nav-right-linkage a:hover{
+	color: #FFD700;
 }
