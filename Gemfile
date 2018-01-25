@@ -40,7 +40,7 @@ gem 'devise'
 
 # For Blog & Comment use
 gem 'ckeditor'
-gem 'paperclip'
+gem 'paperclip', '5.2.0'
 
 # Local Time for easy breakdown of time and date
 gem 'local_time'
